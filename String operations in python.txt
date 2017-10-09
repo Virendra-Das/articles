@@ -1,0 +1,66 @@
+String operations in Python3
+
+Hello,
+    In this article, I am going to talk about using various string functions and slicing methods in python.
+We all are familiar with strings. Anything enclosed between quotes('' or "") is string in python.
+For our understanding, we will take a sample string as an example for the whole tutorial
+lets say,
+mystring = "Hello World!"
+The very basic string while learning any programming language. Let's see the operations one by one.
+
+1. Changing the character case -
+	upper() and lower() are the functions that change the case of the string these are called with.
+	Example
+	
+	print(mystring.lower())
+	
+	It prints hello world!
+	
+	print(mystring.upper())
+	
+	It prints HELLO WORLD!
+	
+2. Counting the string length -
+	
+	len() is the function that returns the length of a string
+	
+	print(len(mystring)) prints 12(including space and punctuation).
+	
+3. Counting the occurance of a specific character in string -
+	count() function is used to count the number of particular character in a string.
+	
+	For example,  print(mystring.count('o')) returns 2
+	NOTE: Remember, the count() function is case-sensitive in nature.
+	That means
+	print(mystring.count('o')) differs from print(mystring.count('O'))
+	The first will print 2 because we have a lowercase o in the string(1 in Hello and another in World) whereas the second one prints 0(zero) because it doesn't find any uppercase O in the string.
+	
+4. String slicing -
+	We use the index here for slicing the string. Each character in a string is assigned an index starting from 0(zero - as most of the programming languages do)
+	print(mystring[2:]) 
+	This will print the string from index 2 to the last index(because last index is empty, it will trace upto the end). The output will be - 
+	
+	print(mystring[:7]) 
+	This will print the string from start(empty) to the index 1 less than the end index. The output will be - 
+	
+	print(mystring[2:7]) 
+	This will print the string from the index 2 to 6(1 less than the specified end index)
+	
+5. Skipping(Stepping) the characters while printing
+	When we want to skip certain number of characters in a string while printing, we can write the number of characters we want to step in one go.
+	See below - 
+	print(mystring[2:7:1]) 
+	This will step just 1 character at a time(that happens normally). So this will print the string as it is but starting from the character at index 2 and ending at index 6.
+	
+	print(mystring[::1]) 
+	This will print the whole string as no start or end index has been specified.
+	
+	print(mystring[::2]) 
+	This will omit 1 character each time as it has to step 2 characters at a time.
+	
+6. Reversing the string using the method of slicing.
+	print(mystring[::-1]) 
+	This will reverse the string. The logic here is, we are printing the whole string but stepping -1 element per step.(When we give negative index, it counts from the end).
+	
+	Same can be done using the following. In this, we are starting from -1 index(When we give negative index, it counts from the end).
+	print(mystring[-1::-1]) 

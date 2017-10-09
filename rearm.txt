@@ -1,0 +1,9 @@
+Windows server OS shuts down automatically after some time.
+
+Are you also the one who is working with the windows server OS(unlicensed :P) and it shuts down every hour or two. Well, I had the same problem when I was experimenting a few things with an unlicensed version of windows server 2012 r2.
+Well here's the solution - You will need to rearm it to prevent shutting down automatically.
+To rearm -
+    Open Command Prompt(CMD)
+    type "slmgr.vbs /rearm" (without double quotes) and hit enter.
+    Now a pop-up appears and asks you to restart your computer. Click OK and restart your pc and you are done.
+    Enjoy.
